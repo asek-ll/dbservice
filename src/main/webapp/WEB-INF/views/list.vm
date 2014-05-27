@@ -1,4 +1,6 @@
 <h2>List of Feeds</h2>
 <ul>
-   
+  #foreach($entry in $entries)
+    <li>$entry.getTitle()</li>
+  #end
 </ul>

@@ -17,6 +17,8 @@
         <property name="resourceLoaderPath" value="/WEB-INF/views/" />
     </bean>
 
+    <mvc:resources mapping="/assets/**" location="/assets/" />
+
     <bean id="viewResolver"
         class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
         <property name="cache" value="true" />
@@ -25,6 +27,11 @@
         <property name="suffix" value=".vm" />
     </bean>
 
+    <bean id="handlerMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+      <property name="interceptors">
+        <bean class="com.appspot.dbservice.BaseInterceptor"/>
+      </property>
+    </bean>
     <context:component-scan base-package="com.appspot.dbservice" />
 
 </beans>

@@ -1,0 +1,47 @@
+    <h1 id="header">
+        <img id="icon" src="/assets/browsepass/icon-16.png" /> BrowsePass
+    </h1>
+    <div class="feedback">
+        <a href="https://bitbucket.org/namn/browsepass/issues">Report issue</a>
+    </div>
+    <div>
+        <div>
+            <div>
+                <div id="url_option" class="form-group">
+                  <label for="url"> First provide the KDBX file.  </label>
+                  <input type="text" id="url" name="url" value="" class="form-control"/>
+                </div>
+                <div id="file_option" class="file_input form-group">
+                  <label for="file_select">Or drag&amp;drop...</label>
+                  <input type="file" id="file_select" class="form-control"/> 
+                </div>
+            </div>
+        </div>
+        <div class="paragraph">
+            <div>
+                <div class="form-group">
+                  <label for="password">Then enter your password and/or pick a key file.</label>
+                  <input type="password" id="password" name="password" class="form-control"/>
+                </div>
+                <div id="keyfile" class="file_input form-group">
+                  <label for="keyfile_select">Or drag&amp;drop...</label>
+                  <input type="file" id="keyfile_select" class="form-control" /> 
+                </div>
+            </div>
+        </div>
+        <div class="paragraph">
+            <div class="form-group">
+              <label for="load_unload">And click Load.</label>
+              <button id="load_unload" class="btn">Load</button>
+            </div>
+        </div>
+    </div>
+    <div class="paragraph">
+        <div class="search form-group">
+          <label for="search">Search</label>
+          <input id="search" name="search" type="text" class="form-control"/>
+        </div>
+    </div>
+    <div class="paragraph">
+        <div id="entries"></div>
+    </div>
