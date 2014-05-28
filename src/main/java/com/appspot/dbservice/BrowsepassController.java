@@ -13,17 +13,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.appspot.dbservice.html.HTMLScriptLink;
 import com.appspot.dbservice.html.HTMLStyleLink;
+import com.appspot.dbservice.layouts.DefaultLayout;
 
 import org.apache.commons.io.IOUtils;
 
 @Controller
 public class BrowsepassController extends BaseWebController{
 
-  @RequestMapping("/browsepass")
+  public BrowsepassController() {
+  	setLayout(new DefaultLayout());
+  }
+
+	@RequestMapping("/browsepass")
   public String list(ModelMap model) {
-  	
-  	scripts = new ArrayList<HTMLScriptLink>();
-  	styles = new ArrayList<HTMLStyleLink>();
   	
   	addScript( new HTMLScriptLink("browsepass/jquery/jquery-1.10.2.min.js") );
   	addScript( new HTMLScriptLink("browsepass/jquery/jquery-ui-1.10.3.min.js") );

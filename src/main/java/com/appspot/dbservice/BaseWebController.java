@@ -9,6 +9,7 @@ import org.w3c.dom.html.HTMLStyleElement;
 
 import com.appspot.dbservice.html.HTMLScriptLink;
 import com.appspot.dbservice.html.HTMLStyleLink;
+import com.appspot.dbservice.layouts.Layout;
 @Controller
 public class BaseWebController {
 	
@@ -17,7 +18,16 @@ public class BaseWebController {
 	
 	protected ArrayList<HTMLScriptLink> scripts = new ArrayList<HTMLScriptLink>();
 	protected ArrayList<HTMLStyleLink> styles = new ArrayList<HTMLStyleLink>();
+	protected Layout layout;
 	
+	public Layout getLayout() {
+		return layout;
+	}
+
+	public void setLayout(Layout layout) {
+		this.layout = layout;
+	}
+
 	@ModelAttribute("scripts")
   public ArrayList<HTMLScriptLink> getScripts() {
 		return scripts;
@@ -44,5 +54,5 @@ public class BaseWebController {
 		scripts = new ArrayList<HTMLScriptLink>();
 		styles = new ArrayList<HTMLStyleLink>();
 	}
-
+	
 }
